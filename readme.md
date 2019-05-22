@@ -22,6 +22,12 @@ $ pip install -r requirements.txt
 
 # Step 1 
 
+* Select the branch (optional)
+
+```console
+$ git checkout step1
+```
+
 * Start application
 
 ```console
