@@ -9,11 +9,11 @@ const app = express();
 // Create a greeting endpoint
 app.get('/', (req, res) => {
     
-  // Define template
-  const formatTemplate = `h1 Hello ${req.query.name}`;
+  // Define template with escaped data interpolation
+  const formatTemplate = `h1 Hello #{name}`;
   
   // Render View
-  res.send(pug.render(formatTemplate));
+  res.send(pug.render(formatTemplate, { name: req.query.name }));
   
 })
 
